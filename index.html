@@ -1,26 +1,104 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Netcrease Global Services LLP</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BPO, KPO & IT Outsourcing Company | Netcrease Global Services LLP</title>
+    <link rel="canonical" href="https://www.netcrease.com/" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>
-        /* Small custom tweaks to match the demo look */
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <meta name="description"
+        content="Netcrease Global Services LLP is a leading BPO, KPO, ITES, call center & software outsourcing company delivering scalable global solutions since 2018.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        eyebrow: "#1C4987",
+                        heading: "#13315C",
+                        paragraph: "#113969",
+                        button: '#112D55',
+                    },
+                },
+            },
+        }
+    </script>
 
+    <!-- FOR SEO RANKINGS -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Netcrease Global Services LLP",
+        "url": "https://www.netcrease.com/",
+        "logo": "https://www.netcrease.com/assets/images/logo.webp",
+        "foundingDate": "2018",
+        "description": "Global BPO, KPO, ITES, call center, consultancy, and software outsourcing company.",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "sales@netcrease.com",
+            "availableLanguage": ["English"]
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/netcrease",
+            "https://www.facebook.com/netcrease"
+        ]
+        }
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "provider": {
+    "@type": "Organization",
+    "name": "Netcrease Global Services LLP"
+  },
+  "serviceType": "BPO, KPO, IT Outsourcing, Call Center Services",
+  "areaServed": "Worldwide",
+  "description": "Enterprise-grade outsourcing services including BPO, KPO, ITES, call center operations, and software development."
+}
+    </script>
+
+    <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        .brand-gradient {
+            background: linear-gradient(135deg, #0ea5e9, #6366f1);
         }
 
         .hero-bg {
-            background-image: linear-gradient(90deg, rgba(14, 165, 233, 0.06), rgba(124, 58, 237, 0.06));
+            background-image: linear-gradient(90deg, rgba(135, 155, 255, 0.037), rgba(139, 90, 224, 0.041));
         }
 
         .glass {
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(89, 76, 76, 0.6);
             backdrop-filter: blur(6px);
+        }
+
+        a {
+            position: relative;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: #0ea5e9;
+            transition: width 0.3s ease;
+        }
+
+        a:hover::after {
+            width: 100%;
         }
     </style>
     <style>
@@ -60,6 +138,8 @@
             }
         }
 
+
+
         .animate-fade-right {
             animation: fadeRight 0.9s ease-out both;
         }
@@ -71,160 +151,130 @@
         .animate-zoom-soft {
             animation: zoomInSoft 1s ease-out both;
         }
-    </style>
 
+
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 25s linear infinite;
+        }
+    </style>
+    <!-- MASK REVEAL -->
+    <style>
+        .reveal {
+            overflow: hidden;
+        }
+
+        .reveal span {
+            display: inline-block;
+            transform: translateY(100%);
+            animation: revealUp 0.8s cubic-bezier(.16, 1, .3, 1) forwards;
+        }
+
+        @keyframes revealUp {
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 
-<body class=" text-gray-800 ">
-    <section class="relative w-full h-auto py-2 overflow-hidden">
-        <!-- Background video -->
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover -z-20">
-            <source src="./assets/background-video/background-video.webm" type="video/webm" />
-        </video>
+<body class=" overflow-x-hidden">
+    <div id="pageLoader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
 
-        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-
-        <!-- Content -->
-        <div class="relative z-10 max-w-7xl mx-auto px-4 
-    flex flex-col md:flex-row items-center justify-between gap-4">
-
-            <!-- Left: Social Icons -->
-            <div class="flex items-center gap-4 md:gap-6" data-aos="fade-down" data-aos-duration="100">
-                <img src="./assets/images/X_logo_2023_(white).png" alt="logo" class="h-6 md:h-8" />
-
-                <img src="./assets/images/instagram.png" alt="logo" class="h-6 md:h-8" />
-
-                <img src="./assets/images/facebook.png" alt="logo" class="h-6 md:h-8" />
-            </div>
-
-            <!-- Right: contact info -->
-            <div class="flex items-center gap-4 md:gap-8" data-aos="fade-down" data-aos-duration="100">
-                <h4 class="text-white text-xs md:text-xl font-medium">
-                    sales@netcrease.com
-                </h4>
-
-                <h4 class="text-white text-xs md:text-xl font-medium whitespace-nowrap">
-                    +91 9876543210
-                </h4>
-            </div>
-
+        <div class="flex flex-col items-center gap-6">
+            <img src="./assets/images/logo.webp" class="w-48 animate-pulse" loading="lazy" />
         </div>
 
-    </section>
-
-    <!-- NAV -->
-
-    <header class="bg-white drop-shadow-lg">
-        <div class="max-w-7xl mx-auto px-6 py-4 md:gap-4 flex items-center justify-between">
-            <a href="#" class="flex items-center">
-                <img src="./assets/images/qt_q_95-removebg-preview.webp" alt="logo" class="w-48 h-auto" />
-
-            </a>
-            <nav class="hidden gap-4 md:flex gap-3 ml-auto ">
-                <a href="#" class="text-lg max-md:text-sm whitespace-nowrap  font-semibold hover:text-sky-600">Home</a>
-                <a href="#about" class="text-lg whitespace-nowrap font-semibold hover:text-sky-600">About Us</a>
-                <a href="#services" class="text-lg whitespace-nowrap font-semibold hover:text-sky-600">Services</a>
-                <a href="#services" class="text-lg whitespace-nowrap font-semibold hover:text-sky-600">Why
-                    Netcrease?</a>
-                <a href="#contact" class="text-lg font-semibold hover:text-sky-600">Contact</a>
-            </nav>
-            <div class="hidden md:flex gap-4 ml-6">
-                <!-- <a href="#" class="px-4 py-2 rounded-md border border-slate-200">Resource Link 1</a> -->
-                <a href="#" class="px-4 py-2 rounded-md bg-sky-600 text-white whitespace-nowrap">Get Started</a>
-            </div>
-
-            <!-- Mobile menu button -->
-            <button id="mobileBtn"
-                class="md:hidden inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
-                <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Mobile menu panel -->
-
-    </header>
-    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden md:hidden z-10"></div>
-    <div id="mobileMenu"
-        class="fixed top-0 right-0 h-full w-72 bg-black text-white bg-opacity-95 shadow-lg transform translate-x-full transition-transform duration-300 md:hidden z-50">
-
-        <div class="flex justify-end p-4">
-            <!-- Close button -->
-            <button id="closeMenuBtn" class="text-2xl font-bold">×</button>
-        </div>
-
-        <div class=" px-6 py-4 space-y-4">
-            <a href="#" class="block text-lg font-medium">Home</a>
-            <a href="#about" class="block text-lg font-medium">About Us</a>
-            <a href="#services" class="block text-lg font-medium">Services</a>
-            <a href="#services" class="block text-lg font-medium">Why Netcrease?</a>
-            <a href="#contact" class="block text-lg font-medium">Contact</a>
-
-            <a href="#" class="block px-4 py-2 text-center bg-sky-600 text-white rounded-md">
-                Get Started
-            </a>
-        </div>
     </div>
 
-    <!-- HERO -->
-    <main class="hero-bg">
+
+    <!-- Navbar -->
+    <div id="header"></div>
+
+    <!-- Hero -->
+    <main class="hero-bg pt-[88px]">
         <section class="relative w-full py-20">
 
-            <!-- Background Video -->
-            <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
-                <source src="./assets/background-video/background-video.webm" type="video/mp4" />
-            </video>
 
 
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+
+            <!-- <div class="absolute inset-0 bg-black bg-opacity-40"></div> -->
 
             <!-- Hero Content -->
-            <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center ">
+            <div class="relative  mx-auto px-6 grid justify-center gap-12 items-center ">
 
-                <div class="animate-fade-right">
-                    <h1 class="text-white text-4xl md:text-5xl font-bold tracking-tighter">
-                        Global Excellence in Outsourcing & Technology Solutions
+
+
+                <div class="animate-fade-right text-center max-w-5xl">
+                    <span class=" inline-block mb-6 text-sm text-eyebrow font-semibold uppercase tracking-widest">
+                        Global Services & Technology
+                    </span>
+                    <h1
+                        class="reveal max-w-7xl text-heading text-4xl md:text-7xl font-bold tracking-tighter md:tracking-[-4px]">
+                        Global Excellence
+
+
+                        in Outsourcing & Technology Solutions
+
                     </h1>
 
-                    <p class="mt-6 text-lg text-gray-300">
+
+                    <div class="mt-6 flex text-eyebrow flex-wrap justify-center gap-4 text-sm">
+                        <span class="px-4 py-2 rounded-full bg-white/70">Faster Operations</span>
+                        <span class="px-4 py-2 rounded-full bg-white/70">Global Coverage</span>
+                        <span class="px-4 py-2 rounded-full bg-white/70">Expert Teams</span>
+                    </div>
+
+                    <p class="mt-6 text-paragraph text-lg mx-auto max-w-4xl">
                         Empowering businesses worldwide with seamless BPO, KPO, ITES, call center, consultancy, and
                         software solutions, we deliver excellence that drives results. With unmatched expertise,
-                        cutting-edge technology, and a commitment to quality, we transform operations, elevate customer
-                        experience, and accelerate growth—making us the trusted partner of leading brands across the
-                        globe.
+
+
                     </p>
 
-                    <div class="mt-8 flex gap-4">
-                        <a href="#" class="px-6 py-3 rounded-md bg-sky-600 text-white font-medium">Get Started</a>
-                        <a href="#about" class="px-6 py-3 rounded-md border text-white border-gray-300">Learn more</a>
+                    <div class="mt-8 flex gap-4 justify-center ">
+                        <a href="#" class="px-6 py-3 rounded-md bg-button text-white font-medium">Get Started</a>
+                        <a href="#about" class="px-6 py-3 rounded-md border text-black border-gray-300">Learn more</a>
                     </div>
                 </div>
 
-                <div class="flex justify-center animate-zoom-soft">
+                <!-- <div class="flex justify-center animate-zoom-soft">
                     <div class="w-full max-w-md glass rounded-xl">
                         <img src="./assets/images/pexels-brett-sayles-4864249.webp" alt="hero" class="w-full rounded" />
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </section>
 
-
         <!-- About -->
-        <section id="about" class="max-w-7xl mx-auto px-6 py-16">
+        <section id="about" class="max-w-7xl mx-auto px-6 py-32">
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div data-aos="fade-right" data-aos-duration="800">
-                    <h3 class="text-6xl font-semibold tracking-tighter">About Us</h3>
+                    <span class="inline-block mb-4 text-sm text-eyebrow font-semibold uppercase tracking-widest">
+                        about us
+                    </span>
+                    <h2 class="text-6xl text-heading font-semibold tracking-tighter">Who We Are</h2>
                     <!-- <h2 class="text-1xl font-semibold tracking-tight">Why we are best in the game!</h2> -->
-                    <p class="mt-3 text-gray-600">Founded in 2018, NetCrease has grown into a global leader in BPO, KPO,
+                    <p class="text-paragraph mt-3">Founded in 2018, NetCrease has grown into a global leader in BPO,
+                        KPO,
                         ITES, call center, consultancy, and software services. From our early beginnings, we set out
                         with a simple mission—to empower businesses with smart, scalable, and reliable outsourcing
                         solutions that drive real results.</p>
 
-                    <p class="mt-3 text-gray-600">Over the years, we’ve built a strong reputation for excellence by
+                    <p class="text-paragraph mt-3">Over the years, we’ve built a strong reputation for excellence by
                         combining skilled talent,
                         cutting-edge technology, and a customer-centric approach. Today, we proudly support clients
                         across
@@ -232,461 +282,732 @@
                         for
                         growth.</p>
 
-                    <p class="mt-3 text-gray-600">At NetCrease, we don’t just deliver services—we deliver partnerships,
+                    <p class="text-paragraph mt-3">At NetCrease, we don’t just deliver services—we deliver partnerships,
                         performance, and progress.
                         Our
                         commitment to innovation, quality, and integrity continues to guide us as we shape the future of
                         global outsourcing.</p>
-                    <a href="#" class="inline-block mt-6 px-4 py-2 border rounded text-white bg-sky-600">Learn
+                    <a href="/about.html" class="inline-block mt-6 px-4 py-2 border rounded text-white bg-button">Learn
                         more</a>
                 </div>
                 <div class="grid grid-row-3 gap-4">
                     <div class="flex gap-8 items-center" data-aos="fade-left" data-aos-delay="100">
-                        <img src="./assets/images/pratice.webp" alt="" class="" />
+                        <img src="./assets/images/practice.webp"
+                            alt="Global outsourcing expertise icon representing Netcrease services" class=""
+                            loading="lazy" />
                         <div>
-                            <h3 class="text-2xl tracking-tight whitespace-nowrap font-semibold">Global Expertise</h3>
-                            <p class="text-gray-600"> Delivering reliable BPO, KPO, ITES,
+                            <h3 class="text-2xl text-heading tracking-tight whitespace-nowrap font-semibold">Global
+                                Expertise</h3>
+                            <p class="text-paragraph"> Delivering reliable BPO, KPO, ITES,
                                 consultancy, and software solutions to clients worldwide since 2018.</p>
                         </div>
                     </div>
+                    <div class="flex gap-8 text-heading items-center" data-aos="fade-left" data-aos-delay="100">
+                        <img src="./assets/images/practice.webp"
+                            alt="Innovation and quality driven outsourcing solutions icon" class="" loading="lazy" />
+
+                        <div>
+                            <h3 class="text-2xl text-heading tracking-tight font-semibold">Quality & Innovation</h3>
+                            <p class="text-paragraph"> Combining skilled teams and modern
+                                technology to boost efficiency and business growth.</p>
+                        </div>
+                    </div>
                     <div class="flex gap-8 items-center" data-aos="fade-left" data-aos-delay="100">
-                        <img src="./assets/images/pratice.webp" alt="" class="" />
-
+                        <img src="./assets/images/practice.webp"
+                            alt="Customer-centric business outsourcing approach icon" class="" loading="lazy" />
                         <div>
-                            <h3 class="text-2xl tracking-tight font-semibold">Quality & Innovation</h3>
-                            <p class="text-gray-600"> Combining skilled teams and modern
-                            technology to boost efficiency and business growth.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-8 items-center" data-aos="fade-left" data-aos-delay="100">
-                        <img src="./assets/images/pratice.webp" alt="" class="" />
-                        <div>
-                            <h3 class="text-2xl tracking-tight font-semibold">Customer-Centric Approach</h3>
-                            <p class="text-gray-600"> Building long-term partnerships
-                            through trust, transparency, and exceptional service.</p>
+                            <h3 class="text-2xl text-heading tracking-tight font-semibold">Customer-Centric Approach
+                            </h3>
+                            <p class="text-paragraph"> Building long-term partnerships
+                                through trust, transparency, and exceptional service.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Logos strip -->
-        <section class="bg-white py-8">
+        <!-- Logos -->
+        <section class="bg-white py-8 overflow-hidden">
+            <div class="relative max-w-7xl mx-auto">
 
-            <div class="max-w-7xl mx-auto px-6 flex items-center justify-between gap-6 overflow-x-auto"
-                data-aos="fade-up">
-                <img src="./assets/images/download-removebg-preview.png" alt="logo" class="w-44 h-auto" />
-                <img src="./assets/images/download__1_-removebg-preview.png" alt="logo" class="w-44 h-auto" />
-                <img src="./assets/images/download-removebg-preview.png" alt="logo" class="w-44 h-auto" />
-                <img src="./assets/images/download__1_-removebg-preview.png" alt="logo" class="w-44 h-auto" />
-                <img src="./assets/images/download-removebg-preview.png" alt="logo" class="w-44 h-auto" />
-                <img src="./assets/images/download__1_-removebg-preview.png" alt="logo" class="w-44 h-auto" />
+                <!-- Scrolling wrapper -->
+                <div class="flex w-max animate-scroll gap-12">
 
-            </div>
-        </section>
+                    <!-- LOGOS (SET 1) -->
+                    <img src="./assets/images/amazon-logo.png" alt="Trusted global client of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
+                    <img src="./assets/images/microsoft-logo.png" alt="Innovative partner of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
+                    <img src="./assets/images/amazon-logo.png" alt="Valued client of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
+                    <img src="./assets/images/microsoft-logo.png" alt="Global partner of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
+                    <img src="./assets/images/amazon-logo.png" alt="Trusted global client of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
+                    <img src="./assets/images/microsoft-logo.png" alt="Innovative partner of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
 
-        <!-- Services -->
+                    <!-- LOGOS (DUPLICATE SET) -->
+                    <img src="./assets/images/amazon-logo.png" alt="Trusted global client of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
+                    <img src="./assets/images/microsoft-logo.png" alt="Innovative partner of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
+                    <img src="./assets/images/amazon-logo.png" alt="Valued client of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
+                    <img src="./assets/images/microsoft-logo.png" alt="Global partner of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
+                    <img src="./assets/images/amazon-logo.png" alt="Trusted global client of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
+                    <img src="./assets/images/microsoft-logo.png" alt="Innovative partner of Netcrease Global Services"
+                        class="w-44 h-auto" loading="lazy" />
 
-
-        <section id="services" class="relative w-full overflow-hidden py-16">
-
-
-            <!-- Content Wrapper (centered & constrained) -->
-            <div class="relative max-w-7xl mx-auto px-6">
-
-                <h2 class="text-6xl font-semibold tracking-tighter text-center" data-aos="fade-up">What We Offer</h2>
-                <p class="mt-3  text-center" data-aos="fade-up">
-                    NetCrease delivers smart, reliable outsourcing and tech solutions
-                    that help businesses grow faster. From BPO and KPO to ITES,
-                    call center support, consultancy, and software development—we
-                    provide everything you need to streamline operations and stay ahead.
-                </p>
-
-                <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                    <!-- Service Card -->
-                    <div data-aos="zoom-in" data-aos-delay="100">
-                        <div
-                            class="p-6 rounded-lg border bg-white/90 backdrop-blur-sm hover:bg-white hover:scale-105 transition-transform duration-300 ease-in-out">
-                            <img src="./assets/images/pexels-brett-sayles-2881224.webp" alt="">
-                            <h3 class="mt-4 text-2xl font-semibold tracking-tight">BPO Services</h3>
-                            <p class="mt-2 text-gray-600">Streamline your operations with efficient, scalable business
-                                process outsourcing tailored to your workflow.</p>
-                            <a href="#" class="inline-block mt-6 px-4 py-2 border rounded text-white bg-sky-600">Learn
-                                more</a>
-                        </div>
-                    </div>
-
-                    <div data-aos="zoom-in" data-aos-delay="100">
-                        <div
-                            class="p-6 rounded-lg border bg-white/90 backdrop-blur-sm hover:bg-white hover:scale-105 transition-transform duration-300 ease-in-out">
-                            <img src="./assets/images/pexels-brett-sayles-4864249.webp" alt="">
-                            <h3 class="mt-4 text-2xl font-semibold tracking-tight">KPO Services</h3>
-                            <p class="mt-2 text-gray-600">Power your decisions with high-end knowledge process
-                                outsourcing
-                                driven by expert insights and analytics.</p>
-                            <a href="#" class="inline-block mt-6 px-4 py-2 border rounded text-white bg-sky-600">Learn
-                                more</a>
-                        </div>
-                    </div>
-
-                    <div data-aos="zoom-in" data-aos-delay="100">
-                        <div
-                            class="p-6 rounded-lg border bg-white/90 backdrop-blur-sm hover:bg-white hover:scale-105 transition-transform duration-300 ease-in-out">
-                            <img src="./assets/images/pexels-brett-sayles-4864249.webp" alt="">
-                            <h3 class="mt-4 text-2xl font-semibold tracking-tight">ITES Solutions</h3>
-                            <p class="mt-2 text-gray-600">Enhance productivity with technology-enabled services designed
-                                to
-                                optimize core processes and boost performance.</p>
-                            <a href="#" class="inline-block mt-6 px-4 py-2 border rounded text-white bg-sky-600">Learn
-                                more</a>
-                        </div>
-                    </div>
-
-                    <div data-aos="zoom-in" data-aos-delay="100">
-                        <div
-                            class="p-6 rounded-lg border bg-white/90 backdrop-blur-sm hover:bg-white hover:scale-105 transition-transform duration-300 ease-in-out">
-                            <img src="./assets/images/pexels-cottonbro-6804581.webp" alt="">
-                            <h3 class="mt-4 text-2xl font-semibold tracking-tight">Call Center Services</h3>
-                            <p class="mt-2 text-gray-600">Deliver exceptional customer support with our 24/7 inbound,
-                                outbound, and omnichannel communication services.</p>
-                            <a href="#" class="inline-block mt-6 px-4 py-2 border rounded text-white bg-sky-600">Learn
-                                more</a>
-                        </div>
-                    </div>
-
-                    <div data-aos="zoom-in" data-aos-delay="100">
-                        <div
-                            class="p-6 rounded-lg border bg-white/90 backdrop-blur-sm hover:bg-white hover:scale-105 transition-transform duration-300 ease-in-out">
-                            <img src="./assets/images/pexels-brett-sayles-4864249.webp" alt="">
-                            <h3 class="mt-4 text-2xl font-semibold tracking-tight">Consultancy Services</h3>
-                            <p class="mt-2 text-gray-600">Get strategic guidance that helps your business grow smarter,
-                                operate efficiently, and stay future-ready.</p>
-                            <a href="#" class="inline-block mt-6 px-4 py-2 border rounded text-white bg-sky-600">Learn
-                                more</a>
-                        </div>
-                    </div>
-
-                    <div data-aos="zoom-in" data-aos-delay="100">
-                        <div
-                            class="p-6 rounded-lg border bg-white/90 backdrop-blur-sm hover:bg-white hover:scale-105 transition-transform duration-300 ease-in-out">
-                            <img src="./assets/images/pexels-brett-sayles-4864249.webp" alt="">
-                            <h3 class="mt-4 text-2xl font-semibold tracking-tight">Software Development</h3>
-                            <p class="mt-2 text-gray-600">Transform ideas into powerful digital solutions with custom
-                                software built for performance and innovation.</p>
-                            <a href="#" class="inline-block mt-6 px-4 py-2 border rounded text-white bg-sky-600">Learn
-                                more</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <section class="relative w-full overflow-hidden py-16">
-            <!-- Background Video -->
-            <video autoplay muted loop playsinline class="absolute static inset-0 w-full h-full object-cover -z-20">
-                <source src="./assets/background-video/background-video.webm" type="video/webm" />
-            </video>
-
-            <!-- Dark Overlay -->
-            <div class="absolute inset-0 bg-black/90 -z-10"></div>
-
-            <div class="relative max-w-7xl mx-auto px-6">
-                <h2 class="text-6xl font-bold text-center tracking-tighter mb-4 text-white" data-aos="fade-right">
-                    Why Work With Netcrease
-                </h2>
-
-                <p class="text-gray-200 text-center mb-12">
-                    Partnering with us unlocks efficiency, innovation, and growth for your business.
-                </p>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <!-- Image -->
-                    <div class="flex justify-center lg:justify-end">
-                        <img src="./assets/images/pexels-casnafu-35058244.webp" alt="Team Collaboration"
-                            class="w-full h-full max-w-md rounded-lg shadow-lg">
-                    </div>
-
-                    <!-- Benefits List -->
-                    <div class="space-y-10 text-white">
-                        <div class="flex gap-4" data-aos="fade-left" data-aos-delay="100">
-                            <div class="flex-shrink-0 text-blue-400 text-3xl font-bold">01</div>
-                            <div>
-                                <h3 class="text-4xl font-semibold mb-2">Global Expertise</h3>
-                                <p class="text-gray-200">
-                                    With years of proven experience, we deliver top-notch BPO, KPO,
-                                    ITES, and software solutions...With years of proven experience, we deliver top-notch BPO, KPO,
-                                    ITES, and software solutions...
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-4" data-aos="fade-left" data-aos-delay="200">
-                            <div class="flex-shrink-0 text-blue-400 text-3xl font-bold">02</div>
-                            <div>
-                                <h3 class="text-4xl font-semibold mb-2">Customer-Centric Approach</h3>
-                                <p class="text-gray-200">
-                                    We put your business first, understanding your unique needs...
-                                    We put your business first, understanding your unique needs...
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-4" data-aos="fade-left" data-aos-delay="300">
-                            <div class="flex-shrink-0 text-blue-400 text-3xl font-bold">03</div>
-                            <div>
-                                <h3 class="text-4xl font-semibold mb-2">Innovative Solutions</h3>
-                                <p class="text-gray-200">
-                                    Our team leverages cutting-edge technology, data-driven insights...
-                                    Our team leverages cutting-edge technology, data-driven insights...
-                                    Our team leverages cutting-edge technology, data-driven insights...
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-4" data-aos="fade-left" data-aos-delay="400">
-                            <div class="flex-shrink-0 text-blue-400 text-3xl font-bold">04</div>
-                            <div>
-                                <h3 class="text-4xl font-semibold mb-2">Scalable & Reliable</h3>
-                                <p class="text-gray-200">
-                                    Our services are designed to grow with your business...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
 
-        <section class="max-w-7xl mx-auto px-6 py-16">
-            <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="font-bold text-6xl tracking-tighter mb-4">Case Studies</h2>
-                <p class="text-gray-600">Explore how we’ve helped businesses worldwide with our tailored solutions.</p>
-            </div>
+        <section class=" py-28 overflow-hidden bg-white">
+            <div class="max-w-7xl mx-auto px-6">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                <!-- Card 1 -->
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <div
-                        class="bg-white px-6 py-8 rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col justify-between hover:scale-105 transition-transform duration-300 ease-in-out">
-                        <div>
-                            <img src="./assets/images/pexels-brett-sayles-2881224.webp" alt="" />
-                            <h3 class="mt-12 text-2xl font-semibold mb-2">System Design</h3>
-                            <p class="text-gray-600 mb-4">Lorem Ipsum is simply dummy text of the printing and
-                                typesetting
-                                industry.</p>
-                        </div>
-                        <a href="#"
-                            class="inline-block whitespace-nowrap px-4 py-2 border w-4/12 text-white bg-sky-600">Learn
-                            more</a>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <div
-                        class="bg-white px-6 py-8 rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col justify-between hover:scale-105 transition-transform duration-300 ease-in-out">
-                        <div>
-                            <img src="./assets/images/pexels-brett-sayles-2881224.webp" alt="" />
-                            <h3 class="mt-12 text-2xl font-semibold mb-2">Operating Networks</h3>
-                            <p class="text-gray-600 mb-4">Lorem Ipsum is simply dummy text of the printing and
-                                typesetting
-                                industry.</p>
-                        </div>
-                        <a href="#"
-                            class="inline-block whitespace-nowrap px-4 py-2 border w-4/12 text-white bg-sky-600">Learn
-                            more</a>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div
-                        class="bg-white px-6 py-8 rounded-lg shadow hover:shadow-lg transition duration-300 flex flex-col justify-between hover:scale-105 transition-transform duration-300 ease-in-out">
-                        <div>
-                            <img src="./assets/images/pexels-brett-sayles-2881224.webp" alt="" />
-                            <h3 class="mt-12 text-2xl font-semibold mb-2">Computer Systems</h3>
-                            <p class="text-gray-600 mb-4">Lorem Ipsum is simply dummy text of the printing and
-                                typesetting
-                                industry.</p>
-                        </div>
-                        <a href="#"
-                            class="inline-block whitespace-nowrap px-4 py-2 border w-4/12 text-white bg-sky-600">Learn
-                            more</a>
-                    </div>
-                </div>
+                <!-- Section Intro -->
+                <div class="max-w-6xl mx-auto text-center mb-24">
 
-            </div>
-        </section>
+                    <!-- Eyebrow -->
+                    <span class="inline-block mb-4 text-eyebrow text-sm font-semibold uppercase tracking-widest">
+                        Trusted Worldwide
+                    </span>
 
+                    <!-- Headline -->
+                    <h2 class="text-5xl text-heading md:text-6xl font-bold tracking-[-3px] leading-tight">
+                        Built for Scale.
+                        <br />
+                        Designed for Growth.
 
-        <section class="w-full px-6 py-16">
-            <div class="mx-auto max-w-7xl flex flex-col md:flex-row gap-24 items-center">
+                    </h2>
 
-                <!-- Image -->
-                <div class="flex justify-center">
-                    <img src="./assets/images/pexels-linkedin-2182970.webp" alt="Contact us"
-                        class="w-full max-w-md rounded-xl shadow-lg object-cover" />
-                </div>
-
-                <!-- Form Content -->
-                <div class="max-w-xl w-full">
-                    <h1 class="text-4xl md:text-6xl font-semibold tracking-tighter" data-aos="fade-up" data-aos-delay="100">
-                        Get in touch with us today!
-                    </h1>
-
-                    <p class="mt-6 text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                        What our clients say about us. What our clients say about us.
-                        What our clients say about us.
+                    <!-- Supporting Copy -->
+                    <p class="mt-8 text-lg md:text-lg text-paragraph max-w-4xl mx-auto leading-relaxed">
+                        From fast-growing startups to global enterprises, businesses rely on Netcrease
+                        to streamline operations, improve efficiency, and build resilient, future-ready
+                        organizations.
                     </p>
 
-                    <form class="mt-8 space-y-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div>
-                            <label for="name" class="block mb-2 px-2 text-lg font-medium">
-                                Full Name
-                            </label>
-                            <input id="name" type="text" placeholder="Enter your full name"
-                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600" />
+                    <!-- Proof Points -->
+                    <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+
+                        <div class="p-6 rounded-xl border bg-white shadow-sm">
+                            <h3 class="text-4xl text-heading font-bold">7+</h3>
+                            <p class="mt-2 text-paragraph">Years of Industry Experience</p>
                         </div>
 
-                        <div>
-                            <label for="email" class="block mb-2 px-2 text-lg font-medium">
-                                Email ID
-                            </label>
-                            <input id="email" type="email" placeholder="Enter your email"
-                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600" />
+                        <div class="p-6 rounded-xl border bg-white shadow-sm">
+                            <h3 class="text-4xl text-heading font-bold">120+</h3>
+                            <p class="mt-2 text-paragraph">Global Clients Served</p>
                         </div>
 
-                        <div>
-                            <label for="phone" class="block mb-2 px-2 text-lg font-medium">
-                                Phone Number
-                            </label>
-                            <input id="phone" type="tel" placeholder="Enter your phone number"
-                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600" />
+                        <div class="p-6 rounded-xl border bg-white shadow-sm">
+                            <h3 class="text-4xl text-heading font-bold">24/7</h3>
+                            <p class="mt-2 text-paragraph">Operational Support</p>
                         </div>
 
-                        <div>
-                            <label for="message" class="block mb-2 px-2 text-lg font-medium">
-                                Your Message
-                            </label>
-                            <textarea id="message" rows="4" placeholder="Write your message"
-                                class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-600"></textarea>
-                        </div>
+                    </div>
 
-                        <button type="submit"
-                            class="w-full sm:w-auto px-8 py-3 rounded-md bg-sky-600 text-white font-medium">
-                            Submit
-                        </button>
-                    </form>
+                    <!-- Soft CTA -->
+                    <div class="mt-14">
+                        <a href="#services"
+                            class="inline-flex text-eyebrow items-center gap-2 font-semibold hover:gap-3 transition-all">
+                            Explore Our Services
+                            <span>→</span>
+                        </a>
+                    </div>
+
                 </div>
+
+
+
+
+            </div>
+        </section>
+
+
+        <!-- Services -->
+        <section id="services" class="relative w-full py-28 overflow-hidden bg-gray-50">
+
+            <!-- Ambient background -->
+            <div
+                class="pointer-events-none absolute -top-40 -left-40 w-[500px] h-[500px] bg-sky-400/20 rounded-full blur-[120px]">
+            </div>
+
+            <div class="relative max-w-7xl mx-auto px-6">
+
+                <!-- Section Header -->
+                <div class="max-w-4xl mx-auto text-center mb-20">
+
+                    <span
+                        class="inline-block text-eyebrow mb-4 text-sky-600 text-sm font-semibold uppercase tracking-widest">
+                        Our Services
+                    </span>
+
+                    <h2 class="text-5xl text-heading md:text-6xl font-bold tracking-tight leading-tight">
+                        What We Offer
+                    </h2>
+
+                    <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+                        Netcrease delivers enterprise-grade outsourcing and technology solutions
+                        that help organizations scale efficiently, reduce complexity, and stay
+                        competitive in a rapidly evolving global market.
+                    </p>
+
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <!-- Service Card -->
+                    <div>
+                        <div class="group h-full p-8 rounded-2xl bg-heading border border-gray-200
+                 hover:border-eyebrow hover:shadow-xl transition-all duration-300">
+
+                            <h3 class="text-2xl text-white font-semibold tracking-tight">
+                                BPO Services
+                            </h3>
+
+                            <p class="mt-4 text-white leading-relaxed">
+                                Streamline business operations with scalable and efficient
+                                process outsourcing tailored to your workflows.
+                            </p>
+
+                            <a href="#" class="inline-flex text-white items-center gap-2 mt-8 font-semibold
+                    group-hover:gap-3 transition-all">
+                                Learn more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service Card -->
+                    <div>
+                        <div class="group h-full p-8 rounded-2xl bg-white border border-gray-200
+                 hover:border-eyebrow hover:shadow-xl transition-all duration-300">
+
+                            <h3 class="text-2xl text-heading font-semibold tracking-tight">
+                                KPO Services
+                            </h3>
+
+                            <p class="mt-4 text-paragraph leading-relaxed">
+                                Enable smarter decision-making through high-value
+                                knowledge process outsourcing powered by expert insights.
+                            </p>
+
+                            <a href="#" class="inline-flex text-paragraph items-center gap-2 mt-8 font-semibold
+                    group-hover:gap-3 transition-all">
+                                Learn more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service Card -->
+                    <div>
+                        <div class="group h-full p-8 rounded-2xl bg-heading border border-gray-200
+                 hover:border-eyebrow hover:shadow-xl transition-all duration-300">
+
+                            <h3 class="text-2xl text-white font-semibold tracking-tight">
+                                ITES Solutions
+                            </h3>
+
+                            <p class="mt-4 text-white leading-relaxed">
+                                Technology-enabled services designed to improve productivity
+                                and optimize mission-critical processes.
+                            </p>
+
+                            <a href="#" class="inline-flex text-white items-center gap-2 mt-8 font-semibold
+                    group-hover:gap-3 transition-all">
+                                Learn more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service Card -->
+                    <div>
+                        <div class="group h-full p-8 rounded-2xl bg-white border border-gray-200
+                 hover:border-eyebrow hover:shadow-xl transition-all duration-300">
+
+                            <h3 class="text-2xl text-heading font-semibold tracking-tight">
+                                Call Center Services
+                            </h3>
+
+                            <p class="mt-4 text-paragraph leading-relaxed">
+                                Deliver consistent, high-quality customer experiences
+                                through 24/7 omnichannel support operations.
+                            </p>
+
+                            <a href="#" class="inline-flex text-paragraph items-center gap-2 mt-8 font-semibold
+                    group-hover:gap-3 transition-all">
+                                Learn more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service Card -->
+                    <div>
+                        <div class="group h-full p-8 rounded-2xl bg-heading border border-gray-200
+                 hover:border-eyebrow hover:shadow-xl transition-all duration-300">
+
+                            <h3 class="text-2xl text-white font-semibold tracking-tight">
+                                Consultancy Services
+                            </h3>
+
+                            <p class="mt-4 text-white leading-relaxed">
+                                Strategic consulting that helps organizations operate
+                                efficiently, scale sustainably, and prepare for the future.
+                            </p>
+
+                            <a href="#" class="inline-flex text-white items-center gap-2 mt-8 font-semibold
+                    group-hover:gap-3 transition-all">
+                                Learn more →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service Card -->
+                    <div>
+                        <div class="group h-full p-8 rounded-2xl bg-white border border-gray-200
+                 hover:border-eyebrow hover:shadow-xl transition-all duration-300">
+
+                            <h3 class="text-2xl text-heading font-semibold tracking-tight">
+                                Software Development
+                            </h3>
+
+                            <p class="mt-4 text-paragraph leading-relaxed">
+                                Build secure, scalable digital products with custom software
+                                engineered for performance and innovation.
+                            </p>
+
+                            <a href="#" class="inline-flex text-paragraph items-center gap-2 mt-8 font-semibold
+                    group-hover:gap-3 transition-all">
+                                Learn more →
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-900 text-white">
+            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h3 class="text-5xl font-bold">7+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div>
+                    <h3 class="text-5xl font-bold">120+</h3>
+                    <p>Global Clients</p>
+                </div>
+                <div>
+                    <h3 class="text-5xl font-bold">24/7</h3>
+                    <p>Support</p>
+                </div>
+                <div>
+                    <h3 class="text-5xl font-bold">99%</h3>
+                    <p>Client Retention</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why work with Netcrease -->
+        <section id="why-netcrease" class="relative w-full bg-white py-28 ">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <!-- Section Header -->
+                <div class="max-w-4xl mx-auto text-center mb-20">
+                    <span class="inline-block mb-4 text-sm font-semibold uppercase tracking-widest text-eyebrow">
+                        Why Netcrease
+                    </span>
+
+                    <h2 class="text-5xl md:text-6xl font-bold tracking-tight text-heading">
+                        Why Businesses Choose Netcrease
+                    </h2>
+
+                    <p class="mt-6 text-lg text-paragraph">
+                        We combine global expertise, innovative thinking, and reliable execution
+                        to help organizations scale faster and operate smarter.
+                    </p>
+                </div>
+
+                <!-- Scroll Area -->
+                <div class="relative sm:h-[100vh] md:h-[200vh]">
+
+                    <!-- Stacked Cards -->
+                    <div class="max-w-3xl mx-auto space-y-10 px-4">
+
+                        <!-- Card 01 -->
+                        <div class="sticky top-40 sm:top-20 md:top-32 bg-heading rounded-2xl shadow-xl p-5 sm:p-8 md:p-14 lg:p-20 z-10">
+                            <div class="flex gap-4 sm:gap-6">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-lg sm:text-xl text-white">
+                                    01
+                                </div>
+                                <div>
+                                    <h3 class="text-lg sm:text-2xl md:text-3xl font-semibold text-white">
+                                        Global Expertise
+                                    </h3>
+                                    <p class="mt-2 sm:mt-3 text-sm sm:text-base text-white leading-relaxed">
+                                        With years of proven experience, we deliver enterprise-grade
+                                        BPO, KPO, ITES, and technology solutions trusted by global teams.
+                                    </p>
+                                    <a href="#" class="inline-flex text-white items-center gap-2 mt-4 sm:mt-6 md:mt-8 font-semibold transition-all hover:gap-3">
+                                        Learn more →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 02 -->
+                        <div class="sticky top-40 sm:top-20 md:top-32 bg-white rounded-2xl shadow-xl p-5 sm:p-8 md:p-14 lg:p-20 z-20">
+                            <div class="flex gap-4 sm:gap-6">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-100 flex items-center justify-center font-bold text-lg sm:text-xl text-gray-700">
+                                    02
+                                </div>
+                                <div>
+                                    <h3 class="text-lg sm:text-2xl md:text-3xl font-semibold text-gray-900">
+                                        Customer-Centric Approach
+                                    </h3>
+                                    <p class="mt-2 sm:mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+                                        We take time to understand your business goals and challenges,
+                                        delivering solutions that are aligned, measurable, and impactful.
+                                    </p>
+                                    <a href="#" class="inline-flex text-paragraph items-center gap-2 mt-4 sm:mt-6 md:mt-8 font-semibold transition-all hover:gap-3">
+                                        Learn more →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 03 -->
+                        <div class="sticky top-40 sm:top-20 md:top-32 bg-heading rounded-2xl shadow-xl p-5 sm:p-8 md:p-14 lg:p-20 z-30">
+                            <div class="flex gap-4 sm:gap-6">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-lg sm:text-xl text-white">
+                                    03
+                                </div>
+                                <div>
+                                    <h3 class="text-lg sm:text-2xl md:text-3xl font-semibold text-white">
+                                        Innovative Solutions
+                                    </h3>
+                                    <p class="mt-2 sm:mt-3 text-sm sm:text-base text-white leading-relaxed">
+                                        Our teams leverage modern technology, automation, and data-driven
+                                        insights to build efficient, future-ready solutions.
+                                    </p>
+                                    <a href="#" class="inline-flex text-white items-center gap-2 mt-4 sm:mt-6 md:mt-8 font-semibold transition-all hover:gap-3">
+                                        Learn more →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 04 -->
+                        <div class="sticky top-40 sm:top-20 md:top-32 bg-white rounded-2xl shadow-xl p-5 sm:p-8 md:p-14 lg:p-20 z-40">
+                            <div class="flex gap-4 sm:gap-6">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-100 flex items-center justify-center font-bold text-lg sm:text-xl text-gray-700">
+                                    04
+                                </div>
+                                <div>
+                                    <h3 class="text-lg sm:text-2xl md:text-3xl font-semibold text-gray-900">
+                                        Scalable & Reliable
+                                    </h3>
+                                    <p class="mt-2 sm:mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+                                        Our services are designed to scale seamlessly with your business,
+                                        ensuring consistency, reliability, and long-term value.
+                                    </p>
+                                    <a href="#" class="inline-flex text-paragraph items-center gap-2 mt-4 sm:mt-6 md:mt-8 font-semibold transition-all hover:gap-3">
+                                        Learn more →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
 
             </div>
         </section>
 
 
 
-        <!-- Resources / Footer CTA -->
-        <section class=" relative mx-auto px-6 py-4">
-            <video autoplay muted loop playsinline class="absolute static inset-0 w-full h-full object-cover -z-20">
-                <source src="./assets/background-video/background-video.webm" type="video/webm" />
-            </video>
 
-            <!-- Dark Overlay -->
-            <div class="absolute inset-0 bg-black/40 -z-10"></div>
-            <div class=" max-w-6xl mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-white">
-                <div>
-                    <img src="./assets/images/qt_q_95-removebg-preview.webp" alt="logo" class="w-36 h-auto" />
-                </div>
-                <div>
-                    <h4 class="font-semibold">How it works</h4>
-                    <ul class="mt-3 text-white space-y-2">
-                        <li>Pricing</li>
-                        <li>Docs</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold">Resources</h4>
-                    <ul class="mt-3 text-white space-y-2">
-                        <li>Pricing</li>
-                        <li>Pricing</li>
-                        <li>See all resources &gt;</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold">About</h4>
-                    <ul class="mt-3 text-white space-y-2">
-                        <li>Terms &amp; Conditions</li>
-                        <li>Privacy policy</li>
-                    </ul>
-                </div>
+        <!-- Case Studies -->
+        <section class="relative bg-white py-28 overflow-hidden">
+
+            <!-- Ambient accent -->
+            <div
+                class="pointer-events-none absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-indigo-400/10 rounded-full blur-[120px]">
             </div>
-            <div class="text-center text-white border-t mt-6 flex flex-col">Copyright © 2025 Netcrease Global Services LLP</div>
+
+            <div class="relative max-w-7xl mx-auto px-6">
+
+                <!-- Section Header -->
+                <div class="max-w-4xl mx-auto text-center mb-20">
+
+                    <span class="inline-block mb-4 text-eyebrow text-sm font-semibold uppercase tracking-widest">
+                        Case Studies
+                    </span>
+
+                    <h2 class="text-5xl text-heading md:text-6xl font-bold tracking-tight leading-tight">
+                        Proven Results Across
+
+                        Industries
+
+                    </h2>
+
+
+                    <p class="mt-6 text-lg text-paragraph leading-relaxed">
+                        Discover how organizations around the world partner with Netcrease
+                        to solve complex challenges, improve performance, and scale
+                        with confidence.
+                    </p>
+
+                </div>
+
+                <!-- Case Studies Grid -->
+                <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <!-- Case Card -->
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="group h-full overflow-hidden rounded-2xl border border-gray-200 bg-white
+                 hover:shadow-xl transition-all duration-300">
+
+                            <img src="./assets/images/network.webp"
+                                alt="Enterprise system design and technology infrastructure solution" loading="lazy"
+                                class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+
+                            <div class="p-8 flex flex-col justify-between h-full">
+
+                                <div>
+                                    <span class="text-xs font-semibold uppercase tracking-widest text-sky-600">
+                                        Enterprise Systems
+                                    </span>
+
+                                    <h3 class="mt-3 text-2xl font-semibold tracking-tight">
+                                        System Design
+                                    </h3>
+
+                                    <p class="mt-4 text-gray-600 leading-relaxed">
+                                        Delivered a scalable system architecture that improved
+                                        performance, reliability, and long-term maintainability.
+                                    </p>
+                                    <a href="#" class="inline-flex items-center gap-2 mt-8 text-sky-600 font-semibold
+                      group-hover:gap-3 transition-all">
+                                        View case study →
+                                    </a>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Card -->
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="group h-full overflow-hidden rounded-2xl border border-gray-200 bg-white
+                 hover:shadow-xl transition-all duration-300">
+
+                            <img src="./assets/images/computer-2.webp"
+                                alt="Global operations and distributed outsourcing network management" loading="lazy"
+                                class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+
+                            <div class="p-8 flex flex-col justify-between h-full">
+
+                                <div>
+                                    <span class="text-xs font-semibold uppercase tracking-widest text-sky-600">
+                                        Global Operations
+                                    </span>
+
+                                    <h3 class="mt-3 text-2xl font-semibold tracking-tight">
+                                        Operating Networks
+                                    </h3>
+
+                                    <p class="mt-4 text-gray-600 leading-relaxed">
+                                        Optimized distributed operations and networks to support
+                                        24/7 service delivery across multiple regions.
+                                    </p>
+                                    <a href="#" class="inline-flex items-center gap-2 mt-8 text-sky-600 font-semibold
+                      group-hover:gap-3 transition-all">
+                                        View case study →
+                                    </a>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Card -->
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <div class="group h-full overflow-hidden rounded-2xl border border-gray-200 bg-white
+                 hover:shadow-xl transition-all duration-300">
+
+                            <img src="./assets/images/network-2.webp"
+                                alt="Professional business outsourcing and technology consulting services"
+                                loading="lazy"
+                                class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+
+                            <div class="p-8 flex flex-col justify-between h-full">
+
+                                <div>
+                                    <span class="text-xs font-semibold uppercase tracking-widest text-sky-600">
+                                        Technology Solutions
+                                    </span>
+
+                                    <h3 class="mt-3 text-2xl font-semibold tracking-tight">
+                                        Computer Systems
+                                    </h3>
+
+                                    <p class="mt-4 text-gray-600 leading-relaxed">
+                                        Integrated secure, high-performance systems that
+                                        enhanced operational efficiency and data reliability.
+                                    </p>
+                                    <a href="#" class="inline-flex items-center gap-2 mt-8 text-sky-600 font-semibold
+                      group-hover:gap-3 transition-all">
+                                        View case study →
+                                    </a>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </section>
+
+
+        <!-- Contact Form -->
+        <section id="contact" class="relative bg-white py-28 overflow-hidden">
+
+            <!-- Ambient accents -->
+            <div
+                class="pointer-events-none absolute -top-40 -left-40 w-[520px] h-[520px] bg-sky-400/10 rounded-full blur-[120px]">
+            </div>
+            <div
+                class="pointer-events-none absolute -bottom-40 -right-40 w-[520px] h-[520px] bg-indigo-400/10 rounded-full blur-[120px]">
+            </div>
+
+            <div class="relative max-w-7xl mx-auto px-6">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+                    <!-- Left: Content -->
+                    <div class="max-w-xl">
+
+                        <span class="inline-block mb-4 text-eyebrow text-sm font-semibold uppercase tracking-widest">
+                            Contact Us
+                        </span>
+
+                        <h2 class="text-5xl md:text-6xl text-heading font-bold tracking-tight leading-tight">
+                            Let’s Build Something Great Together.
+                            <!-- <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-500">
+                                
+                            </span> -->
+                        </h2>
+
+                        <p class="mt-6 text-lg text-paragraph leading-relaxed">
+                            Whether you’re exploring outsourcing solutions or looking to scale
+                            your operations, our team is ready to help you move forward with confidence.
+                        </p>
+
+                        <!-- Trust Signals -->
+                        <div class="mt-10 grid grid-cols-2 gap-6 text-sm text-paragraph">
+                            <div>✔ 24/7 Global Support</div>
+                            <div>✔ Enterprise-Grade Security</div>
+                            <div>✔ Proven Delivery Models</div>
+                            <div>✔ Dedicated Account Teams</div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Form Card -->
+                    <div class="relative rounded-2xl border border-gray-200 bg-white shadow-xl p-10" data-aos="fade-up"
+                        data-aos-delay="100">
+
+                        <form class="space-y-6">
+
+                            <div>
+                                <label class="block mb-2 text-sm font-medium text-gray-700">
+                                    Full Name
+                                </label>
+                                <input type="text" placeholder="John Doe" class="w-full rounded-lg border border-gray-300 px-4 py-3
+                     focus:outline-none focus:ring-2 focus:ring-sky-600" />
+                            </div>
+
+                            <div>
+                                <label class="block mb-2 text-sm font-medium text-gray-700">
+                                    Email Address
+                                </label>
+                                <input type="email" placeholder="you@company.com" class="w-full rounded-lg border border-gray-300 px-4 py-3
+                     focus:outline-none focus:ring-2 focus:ring-sky-600" />
+                            </div>
+
+                            <div>
+                                <label class="block mb-2 text-sm font-medium text-gray-700">
+                                    Phone Number
+                                </label>
+                                <input type="tel" placeholder="+1 (555) 000-0000" class="w-full rounded-lg border border-gray-300 px-4 py-3
+                     focus:outline-none focus:ring-2 focus:ring-sky-600" />
+                            </div>
+
+                            <div>
+                                <label class="block mb-2 text-sm font-medium text-gray-700">
+                                    Your Message
+                                </label>
+                                <textarea rows="4" placeholder="Tell us about your requirements..." class="w-full rounded-lg border border-gray-300 px-4 py-3
+                     focus:outline-none focus:ring-2 focus:ring-sky-600"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full rounded-lg bg-heading px-8 py-4 text-white font-semibold
+                   hover:bg-sky-700 transition">
+                                Send Message
+                            </button>
+
+                            <p class="text-xs text-gray-500 text-center">
+                                We’ll get back to you within 24 hours.
+                            </p>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
 
 
     </main>
 
-    <script>
-        // Mobile menu toggle
-
-        const mobileBtn = document.getElementById('mobileBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const overlay = document.getElementById('overlay');
-        const closeMenuBtn = document.getElementById('closeMenuBtn');
-
-        // Open menu
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('translate-x-full');
-            overlay.classList.remove('hidden');
-        });
-
-        // Close menu (button)
-        closeMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.add('translate-x-full');
-            overlay.classList.add('hidden');
-        });
-
-        // Close menu (click outside)
-        overlay.addEventListener('click', () => {
-            mobileMenu.classList.add('translate-x-full');
-            overlay.classList.add('hidden');
-        });
 
 
 
-        // Simple testimonials carousel
-        const slides = document.querySelectorAll('.testimonial-slide');
-        const dots = document.querySelectorAll('[data-dot]');
-        let current = 0;
-        function showSlide(i) {
-            slides.forEach(s => s.classList.add('hidden'));
-            dots.forEach(d => d.classList.remove('bg-slate-500'));
-            slides[i].classList.remove('hidden');
-            dots[i].classList.add('bg-slate-500');
-            current = i;
-        }
-        dots.forEach(d => d.addEventListener('click', () => showSlide(Number(d.dataset.dot))));
 
-        // auto rotate
-        setInterval(() => {
-            showSlide((current + 1) % slides.length);
-        }, 5000);
-    </script>
+
+
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 900,
-            easing: 'ease-out-cubic',
-            once: true,
-            offset: 0,
-            delay: 0,
-            anchorPlacement: 'top-bottom'
-        });
-    </script>
+
+    <script src="trial.js"></script>
 
 </body>
+
 
 </html>
