@@ -12,23 +12,23 @@ fetch("./components/header.html")
 
     mobileBtn?.addEventListener('click', () => {
       mobileMenu.classList.remove('translate-x-full');
-      overlay.classList.remove('hidden');
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
     });
 
     closeMenuBtn?.addEventListener('click', () => {
       mobileMenu.classList.add('translate-x-full');
-      overlay.classList.add('hidden');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
     });
 
     overlay?.addEventListener('click', () => {
       mobileMenu.classList.add('translate-x-full');
-      overlay.classList.add('hidden');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
     });
 
     document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('translate-x-full');
-        overlay.classList.add('hidden');
+        overlay.classList.add('opacity-0', 'pointer-events-none');
       });
     });
   });
